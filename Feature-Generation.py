@@ -102,6 +102,7 @@ df["Embarked"]=df["Embarked"].fillna(df["Embarked"].mode()[0])
 df.isnull().sum()
 df
 #feature encoding
+
 from category_encoders import BinaryEncoder
 be=BinaryEncoder()
 df["Sex"]=be.fit_transform(df[["Sex"]])
